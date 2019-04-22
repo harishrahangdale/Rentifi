@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/row_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adview"
+        android:layout_below="@+id/toolbar_main">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/ContainerGallery"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/ic_launcher" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-90dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="60dp"
+                        card_view:cardBackgroundColor="@color/white"
+                        card_view:cardCornerRadius="2dp"
+                        card_view:cardUseCompatPadding="false"
+                        card_view:elevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="18dp"
+                                android:gravity="center|start"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/round_green_bg"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/no_item_found"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <com.github.ornolfr.ratingview.RatingView
+                                    android:id="@+id/ratingView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    card_view:drawable_empty="@drawable/ic_star_empty"
+                                    card_view:drawable_filled="@drawable/ic_star_filled"
+                                    card_view:drawable_half="@drawable/ic_star_half"
+                                    card_view:drawable_margin="2dp"
+                                    card_view:drawable_size="15dp"
+                                    card_view:is_indicator="true"
+                                    card_view:max_count="5" />
+
+                                <TextView
+                                    android:id="@+id/textAvg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="4dp"
+                                    android:gravity="center"
+                                    android:text="(4.5)"
+                                    android:textColor="@color/gray"
+                                    android:textSize="10sp" />
+
+                                <ImageView
+                                    android:id="@+id/image_rating"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:src="@drawable/ic_rating" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:singleLine="true"
+                                android:text="@string/no_item_found"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|start"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center|start"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/textAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/no_item_found"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|start"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center|start"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:src="@drawable/ic_call_small" />
+
+                                <TextView
+                                    android:id="@+id/textPhone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/no_item_found"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/list_line_detail_gradient" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_orange_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_detail_bed"
+                                            android:tint="@color/white" />
+
+                                        <TextView
+                                            android:id="@+id/textBed"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="3 Bed"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_orange_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_detail_bath" />
+
+                                        <TextView
+                                            android:id="@+id/textBath"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="3 Bed"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_orange_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_detail_sf" />
+
+                                        <TextView
+                                            android:id="@+id/textSquare"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="3 Bed"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_fur"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_green_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_furnished" />
+
+                                        <TextView
+                                            android:id="@+id/textFur"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="Non Verified"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_very"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_green_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_verified_properties" />
+
+                                        <TextView
+                                            android:id="@+id/textVery"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="Semi-Furnished"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+
+                            <!--Suitable For Code Added-->
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/list_line_detail_gradient" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/property_suitable_for"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="40dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="@color/orange" />
+
+                            <!--<View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/list_line_detail_gradient" />-->
+
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_boys"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_gray_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_boys"
+                                            android:tint="@color/white" />
+
+                                        <TextView
+                                            android:id="@+id/textBoys"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="Boys"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_girls"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_gray_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_girls" />
+
+                                        <TextView
+                                            android:id="@+id/textGirls"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="Girls"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_family"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_gray_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_family" />
+
+                                        <TextView
+                                            android:id="@+id/textFamily"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="Family"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_married_couple"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_gray_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_married_couple" />
+
+                                        <TextView
+                                            android:id="@+id/textMarried"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="Married Couple"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:background="@drawable/list_line_gradient" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="6dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/image_unmarried_couple"
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/circle_gray_detail"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_unmarried_couple" />
+
+                                        <TextView
+                                            android:id="@+id/textUnmarried"
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:singleLine="true"
+                                            android:text="Unmarried Couple"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                            <!--Ends Here-->
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/list_line_detail_gradient" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/property_desc"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="40dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/orange" />
+
+                            <WebView
+                                android:id="@+id/property_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/list_line_detail_gradient" />
+
+                            <TextView
+                                android:id="@+id/txtAmenities"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/property_amenities"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/viewAmenities"
+                                android:layout_width="40dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/orange" />
+
+                            <FrameLayout
+                                android:id="@+id/ContainerAmenities"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp" />
+
+                            <View
+                                android:id="@+id/viewAmenities1"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/list_line_detail_gradient" />
+
+                            <!--<TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/property_floor_plan"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="40dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/orange" />
+
+                            <ImageView
+                                android:id="@+id/image_floor"
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:contentDescription="@string/app_name" />
+
+
+                            <View
+                                android:id="@+id/viewAmenities3"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/list_line_detail_gradient" />-->
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <ImageView
+                        android:id="@+id/imageMap"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/circle_orange"
+                        android:contentDescription="@string/app_name"
+                        android:elevation="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic__detail_location" />
+
+                    <ImageView
+                        android:id="@+id/imageCall"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_toStartOf="@+id/imageMap"
+                        android:background="@drawable/circle_green"
+                        android:contentDescription="@string/app_name"
+                        android:elevation="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic__detail_call" />
+
+                    <ImageView
+                        android:id="@+id/imageChat"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_toStartOf="@+id/imageCall"
+                        android:background="@drawable/circle_blue"
+                        android:contentDescription="@string/app_name"
+                        android:elevation="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_message_black_24dp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/adview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</RelativeLayout>

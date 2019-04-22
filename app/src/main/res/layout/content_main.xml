@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <FrameLayout
+        android:id="@+id/Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/app_bar_main" />
+
+    <View
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/adview"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/shadow" />
+
+    <com.irfaan008.irbottomnavigation.SpaceNavigationView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/adview"
+        android:layout_alignWithParentIfMissing="true"
+        app:active_centre_button_icon_color="@color/white"
+        app:active_item_color="@color/colorPrimary"
+        app:centre_button_color="@color/colorPrimary"
+        app:centre_button_icon="@drawable/ic_buy_sell_property"
+        app:inactive_centre_button_icon_color="@color/white"
+        app:space_background_color="@color/bg_bottom_bar" />
+
+    <LinearLayout
+        android:id="@+id/adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+         android:orientation="vertical">
+    </LinearLayout>
+
+</RelativeLayout>

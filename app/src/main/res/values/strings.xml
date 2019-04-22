@@ -1,0 +1,223 @@
+<resources>
+    <string name="app_name">Rentifi</string>
+
+    <string name="google_maps_key">AIzaSyDay6Qbk3MQD4Z80MH_HnR36TJGTrd2Ddc</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_into_continue">Sign in to continue</string>
+
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="network_msg">No network connection</string>
+    <string name="default_latitude">Latitude</string>
+    <string name="default_longitude">Logitude</string>
+
+    <!--left navigation drawer-->
+    <string name="menu_home">Home</string>
+    <string name="menu_property">All Properties</string>
+    <string name="menu_latest">Latest</string>
+    <string name="menu_favourite">Favourite</string>
+    <string name="menu_setting">Settings</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_communicate">Communicate</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_rate_app">Rate App</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="menu_more_app">More App</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_login">Login</string>
+    <string name="menu_privacy">Privacy Policy</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_add_properties">Add Properties</string>
+    <string name="menu_my_properties">My Properties</string>
+    <string name="notification_title">Enable Push Notification</string>
+
+    <string name="no_item_found">No Item Found</string>
+    <string name="you_may">You may also like</string>
+
+    <string name="version">Version</string>
+    <string name="author">Author</string>
+    <string name="company">Company</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+    <string name="contact">Contact</string>
+    <string name="about">About</string>
+
+    <!--Login/Sign Up-->
+     <string name="name_login">Name</string>
+     <string name="email_login">Email</string>
+     <string name="password_login">Password</string>
+      <string name="phone_login">Phone</string>
+    <string name="address_title">Address</string>
+    <string name="login">Login</string>
+    <string name="skip">Skip</string>
+    <string name="loading_title">Loading...</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="no_account">Don\'t Have an Account? </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="register">Register</string>
+    <string name="already_account">Already Have an Account? </string>
+    <string name="enter_city">Enter City</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="submit">Submit</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="send">Send</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="forgot_description">Enter your email address below and  we\'ll send you email with password</string>
+    <string name="button_text_forgot_password">Forgot your password?</string>
+    <string name="profile_name_lbl">Name - </string>
+    <string name="profile_email_lbl">Email - </string>
+    <string name="profile_phone_lbl">Phone - </string>
+    <string name="address_lbl">Address - </string>
+    <string name="profile_password_lbl">Password - </string>
+    <string name="detail_fur">Furnished</string>
+    <string name="detail_semi">Semi-Furnished</string>
+    <string name="detail_un_semi">Unfurnished</string>
+    <string name="detail_very">Verified</string>
+    <string name="detail_un_very">Non Verified</string>
+    <string name="advance_filter_title">Advance Property Filter</string>
+    <string name="filter_recommended">Recommended Filter</string>
+    <string name="filter_recommended_very">Verified Properties</string>
+    <string name="filter_recommended_non_very">Non Verified Properties</string>
+    <string name="filter_price">Price</string>
+    <string name="filter_price_min">Min:- </string>
+    <string name="filter_price_max">Max:- </string>
+    <string name="filter_furnishing">Furnishing Status</string>
+    <string name="filter_furnishing_fur">Furnished</string>
+    <string name="filter_furnishing_semi">Semi-Furnished</string>
+    <string name="filter_furnishing_un_fur">Unfurnished</string>
+    <string name="filter_type_properties">Property Type</string>
+    <string name="filter_bed">BedRoom</string>
+    <string name="filter_apply">Apply</string>
+    <string name="max_value">Max -</string>
+    <string name="min_value">Min -</string>
+    <string name="max_value_price">100</string>
+    <string name="min_value_price">5000000</string>
+    <string name="currency_symbol">₹</string>
+    <string name="choose_one_type">Choose type atleast one</string>
+    <string name="sort_by_title">Sort By</string>
+    <string name="sort_by_distance">Distance</string>
+    <string name="sort_by_law">Price - High to Low</string>
+    <string name="sort_by_all">All Properties</string>
+    <string name="sort_by_high">Price - Low to High</string>
+    <string name="sort_by_latest">Latest</string>
+    <string name="sort_by_popular">Popular</string>
+    <string name="location_permission">Location permission is required to find properties near you, without that you will not get optimal results</string>
+
+    <string name="gdpr_privacy_link">https://termsfeed.com/blog/privacy-policy-admob/</string>
+
+    <!-- connection message -->
+    <string name="conne_msg1">No Network Connection!!!</string>
+    <string name="conne_msg2">Please connect to working Internet connection</string>
+    <string name="nodata">No Data Found</string>
+    <string name="update">Update</string>
+    <string name="logout_msg">Are you sure you want to logout?</string>
+
+    <string name="share_msg">Hi,I would like to share Application which is used to find real estate around you free please download it from Google Play Store Free Here \n https://play.google.com/store/apps/details?id=</string>
+    <string name="login_msg">You need to login first</string>
+
+    <string name="favourite_add">Favourite has been saved</string>
+    <string name="favourite_remove">Favourite has been removed</string>
+
+    <string name="home_latest">Latest</string>
+    <string name="home_premium">Premium Property</string>
+    <string name="featured">Popular</string>
+    <string name="more">View All</string>
+
+    <string name="text_no_item">No item available.</string>
+    <string name="tag_line">   </string>
+
+
+    <string name="exit">Exit</string>
+    <string name="exit_msg">Are You Sure You Want To Quit?</string>
+
+    <string name="property_desc">Property Description</string>
+    <string name="property_suitable_for">Property Suitable For</string>
+    <string name="property_amenities">Amenities</string>
+    <string name="property_floor_plan">Floor Plan</string>
+
+    <string name="rating">Rating</string>
+     <string name="thank_rating">Thanks for rating</string>
+
+    <string name="bed_bath">Bed</string>
+    <string name="bed_bath2">Bath</string>
+    <string name="bed_bath3">SF</string>
+
+    <string name="subject">Subject</string>
+    <string name="description">Description</string>
+    <string name="write_here">Write here..</string>
+    <string name="search_property">Search Property</string>
+    <string name="search_keyword">Enter Your Keyword/Location</string>
+    <string name="property_details">Property Details</string>
+    <string name="property_gallery">Property Gallery</string>
+    <string name="property_location">Location</string>
+
+     <string name="select_type">Select Purpose Type</string>
+    <string name="select_suitable_type">Select Suitable For</string>
+    <string name="select_type_home">Select Purpose</string>
+    <string name="add_properties_type">Select Category</string>
+    <string name="add_properties_purpose">Purpose</string>
+    <string name="add_properties_suitable_for">Suitable For</string>
+    <string name="add_properties_PropertyName">Property Name Ex. -  "Sharma House"</string>
+    <string name="add_properties_PropertyDescription">Property Description Ex. - No Of Rooms, Floor, etc</string>
+    <string name="add_properties_Phone">Phone</string>
+    <string name="add_properties_Address">Address</string>
+    <string name="add_properties_Latitude">Latitude</string>
+    <string name="add_properties_Longitude">Longitude</string>
+    <string name="add_properties_Bedrooms">No. Of Bedrooms</string>
+    <string name="add_properties_Bathrooms">Bathrooms</string>
+    <string name="add_properties_Area">Area</string>
+    <string name="add_properties_Amenities">Amenities</string>
+    <string name="add_properties_Price">Price</string>
+    <string name="add_properties_FeaturedImage">Property Icon</string>
+    <string name="add_properties_FloorPlanImage">Floor Plan Image</string>
+    <string name="add_properties_GalleryImage">Images</string>
+    <string name="add_properties_submit">Submit</string>
+    <string name="select_image">Select Image</string>
+
+    <string name="location_details">Location details here</string>
+    <string name="select_your_location">Select Your Location</string>
+
+    <!--if you want rtl change value of isRTL to true else false-->
+    <string name="isRTL">false</string>
+
+    <string name="play_more_app">https://play.google.com/store/apps/developer?id=</string>
+
+
+    <string-array name="purpose_array">
+        <item>All</item>
+        <item>Sale</item>
+        <item>Rent</item>
+    </string-array>
+
+    <string-array name="suitable_for_array">
+        <item>Students - Boys</item>
+        <item>Students - Girls</item>
+        <item>Family</item>
+        <item>Married Couple</item>
+        <item>Unmarried Couple</item>
+    </string-array>
+
+    <string name="sfb">Students - Boys</string>
+    <string name="sfg">Students - Girls</string>
+    <string name="sff">Family</string>
+    <string name="sfmc">Married Couple</string>
+    <string name="sfuc">Unmarried Couple</string>
+
+    <string-array name="fur_array">
+        <item>Furnished</item>
+        <item>Semi-Furnished</item>
+        <item>Unfurnished</item>
+    </string-array>
+
+    <string name="please_enter_otp">Please enter OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="verify_otp_description">Please wait while we auto-fetch the OTP sent to your number or you may also enter here manually</string>
+    <string name="add_properties_City">City</string>
+    <string name="add_properties_Pincode">Pincode</string>
+    <string name="add_properties_State">State</string>
+
+</resources>
